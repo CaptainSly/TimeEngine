@@ -1,0 +1,31 @@
+plugins {
+  id 'application'
+  id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+sourceSets.main.java.srcDirs = [ "src/main/java"]
+sourceSets.main.resources.srcDirs = [ "src/main/resources" ]
+
+eclipse.project.name = engineName + " - Launcher"
+
+javafx {
+
+	version = "11.0.2"
+	modules = [ 'javafx.controls' ]
+
+}
+
+dependencies {
+	
+	implementation project(":engine")
+	implementation project(":editor")
+
+	implementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+  	implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+  	implementation "com.badlogicgames.gdx:gdx-controllers-desktop:$gdxVersion"
+  	implementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+  	implementation "com.badlogicgames.gdx:gdx-controllers-platform:$gdxVersion:natives-desktop"
+  	implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+  		
+
+}

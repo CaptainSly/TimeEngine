@@ -1,0 +1,54 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		
+		maven { url 'https://jitpack.io' }
+		maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+	
+	}
+}
+
+allprojects {
+	apply plugin: 'eclipse'
+}
+
+configure(subprojects) {
+	apply plugin: 'java'
+}
+
+subprojects {
+
+	version = '0.0.1'
+
+	ext {
+		engineName = "Time"
+		gdxVersion = '1.9.11'
+		igcVersion = '1.0.0'
+		tpVersion = '5.0.0'
+		tplVersion = '1.2.0'
+		ashVersion = '1.7.3'
+		visVersion = '1.4.6'
+		aiVersion = '1.8.1'
+		vfsVersion = '2.6.0'
+		zstdVersion = '1.4.5-6'
+		airVersion  = '0.17'
+		jimVersion = '1.1'
+		truVersion = '0.12.2'
+	}
+	
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		
+		maven { url 'https://jitpack.io' }
+		maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+	}
+
+}
+
+tasks.eclipse.doLast {
+  delete '.project'
+  delete '.classpath'
+  delete '.settings/'
+}

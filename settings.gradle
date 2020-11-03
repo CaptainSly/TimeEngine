@@ -1,0 +1,2 @@
+rootProject.name = 'Time'
+include 'library', 'editor', 'engine', 'launcher'

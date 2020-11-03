@@ -1,0 +1,25 @@
+sourceSets.main.java.srcDirs = [ "src/main/java"]
+
+sourceCompatibility = 1.8
+	
+eclipse.project.name = engineName + " - Library"
+
+dependencies {
+
+	implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+	implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+	implementation "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
+	implementation "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+
+	implementation "com.kotcrab.vis:vis-ui:$visVersion"
+	
+	implementation "com.badlogicgames.ashley:ashley:$ashVersion"
+	
+	implementation "com.rafaskoberg.gdx:typing-label:$tplVersion"
+	implementation "com.strongjoshua:libgdx-inGameConsole:$igcVersion"
+	implementation "com.github.raeleus.TenPatch:tenpatch:$tpVersion"
+	implementation 'com.github.raeleus:stripe:master-SNAPSHOT'
+	
+	implementation "org.apache.commons:commons-vfs2:$vfsVersion"
+	
+}
